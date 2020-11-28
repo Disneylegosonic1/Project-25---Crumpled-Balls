@@ -1,5 +1,5 @@
 class Paper{
-    constructor(x,y,radius){
+    constructor(x,y){
         var options = {
             isStatic:false,
             restitution:0.3,
