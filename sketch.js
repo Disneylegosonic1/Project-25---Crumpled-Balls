@@ -17,7 +17,7 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-  paper = new Paper(100,200,20);
+  paper = new Paper(100,200, 20);
   
   ground = new Ground(750,690,1500,10)
 
@@ -36,11 +36,11 @@ function draw() {
   background(255);
 
   ground.display();
+  paper.display();
   dustbin1.display();
   dustbin2.display();
   dustbin3.display();
   image(binimage, 560,485,200,200);
-  paper.display();
 
   drawSprites();
  
@@ -48,8 +48,6 @@ function draw() {
 
 function keyPressed(){
 	if (keyCode === UP_ARROW){
-	   Matter.Body.applyForce(paper.body,paper.body.position,{x:60,y:-60});
+	   Matter.Body.applyForce(paper.body,paper.body.position,{x:55,y:-80});
 	}
 }
-
-
