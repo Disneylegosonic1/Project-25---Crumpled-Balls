@@ -1,5 +1,5 @@
 class Paper{
-    constructor(x,y){
+    constructor(x,y,r){
         var options = {
             isStatic:false,
             restitution:0.3,
@@ -7,14 +7,15 @@ class Paper{
             density:1.2,
             
         }
-        this.body=Bodies.circle(x,y,70,options);
+        this.body=Bodies.circle(x,y,r,options);
+        this.r = r;
         this.image = loadImage("paper.png");
         World.add(world,this.body);
     }
 
     display(){
-        push();
         var pos=this.body.position;
+        push(); 
         translate(pos.x,pos.y);
         imageMode(CENTER);
         image(this.image,0,0,70,70);     
